@@ -1,9 +1,10 @@
 import styles from "./App.module.scss";
+import Card from "./Card";
 
 const App = () => {
   return (
     <div className={styles.App}>
-      <img src="https://raw.githubusercontent.com/isaec/isaec/main/github-metrics.svg" />
+      <Card />
       <p>help im alive!</p>
     </div>
   );
