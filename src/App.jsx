@@ -2,7 +2,7 @@ import styles from "./App.module.scss";
 
 const App = () => {
   return (
-    <div>
+    <div className={styles.App}>
       <img src="https://raw.githubusercontent.com/isaec/isaec/main/github-metrics.svg" />
       <p>help im alive!</p>
     </div>

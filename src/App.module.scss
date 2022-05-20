@@ -1,0 +1,9 @@
+@use "config" as *;
+
+.App {
+  display: grid;
+  grid-template-columns: $grid-page;
+  & > * {
+    grid-column: $grid-page-main;
+  }
+}
