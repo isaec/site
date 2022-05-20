@@ -1,8 +1,8 @@
-@use "config" as c;
+@use "config" as *;
 
 body {
   margin: 0;
-  font-family: c.$font-sans;
+  font-family: $font-sans;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
