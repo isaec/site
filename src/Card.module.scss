@@ -1,0 +1,15 @@
+@use "config" as *;
+
+.Card {
+  align-self: center;
+  background-color: $color-grey-800;
+  margin: auto;
+  border-radius: $radius-lg;
+  contain: content;
+  & > p {
+    margin: $size-2;
+    margin-left: $size-4;
+  }
+  & > .metric {
+  }
+}
