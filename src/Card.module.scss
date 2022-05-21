@@ -18,7 +18,7 @@
     $vert-offset-from: 0;
     $vert-offset-to: 1;
     $hori-offset-from: 1;
-    $hori-offset-to: 3;
+    $hori-offset-to: 2;
 
     @for $i from 1 through length($rainbow) {
       $color: darken(list.nth($rainbow, $i), 30%);
