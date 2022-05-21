@@ -1,18 +1,29 @@
 @use "config" as *;
 
 .Card {
-  align-self: center;
   background-color: $color-grey-900;
-  margin: auto;
+  margin: $size-5 auto;
   border-radius: $radius-lg;
   will-change: transform; // this little nasty thing will prevent lag on mobile, somehow
   & > p {
-    margin: $size-2;
-    margin-left: $size-4;
+    margin: $size-2 $size-4;
+    font-size: $scale-5;
+    @keyframes pulse {
+      from {
+        text-shadow: 1px 1px 2px $color-red, 0 0 1em $color-blue, 0 0 0.2em $color-blue;
+      }
+      to {
+        text-shadow: 1px 1px 2px $color-red-300, 0 0 1em $color-blue-300, 0 0 0.2em $color-blue-300;
+      }
+    }
+    animation: pulse 4s $easing-standard infinite alternate;
   }
   & > .metric {
-    max-width: 100%;
-    contain: paint;
+    width: 95%;
+    object-fit: contain;
+    min-width: none;
+    // contain: paint;
+    margin: 0 $size-2
   }
-  box-sizing: $elevation-5;
+  box-shadow: $elevation-5;
 }
