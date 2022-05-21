@@ -5,7 +5,6 @@ const App = () => {
   return (
     <div className={styles.App}>
       <Card />
-      <p>help im alive!</p>
     </div>
   );
 };
