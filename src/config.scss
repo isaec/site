@@ -183,6 +183,7 @@ $color-brown-300: #a1887f;
 $color-brown-500: #795548;
 $color-brown-700: #5d4037;
 $color-brown: $color-brown-500;
+$rainbow: $color-pink, $color-red, $color-orange, $color-yellow, $color-green, $color-blue, $color-purple;
 
 // grid-template-columns and grid-template-rows
 $grid-2: repeat(2, minmax(0, 1fr));

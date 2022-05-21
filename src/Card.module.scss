@@ -1,4 +1,5 @@
 @use "config" as *;
+@use "sass:list";
 
 .Card {
   background-color: $color-grey-900;
@@ -8,15 +9,33 @@
   & > p {
     margin: $size-2 $size-4;
     font-size: $scale-5;
+
+    $from-shadow: ();
+    $to-shadow: ();
+
+    $blur: 6px;
+    // multipliers for 1px
+    $vert-offset: 2;
+    $hori-offset-from: 2;
+    $hori-offset-to: 4;
+
+    @for $i from 1 through length($rainbow) {
+      $color: list.nth($rainbow, $i);
+      $from-shadow: list.append($from-shadow, $hori-offset-from*$i + unquote("px") $vert-offset*$i + unquote("px") $blur $color);
+      $to-shadow: list.append($to-shadow, $hori-offset-to*$i + unquote("px") $vert-offset*$i + unquote("px") $blur $color);
+    }
+
+    $from-shadow: list.zip($from-shadow);
+    $to-shadow: list.zip($to-shadow);
     @keyframes pulse {
       from {
-        text-shadow: 1px 1px 2px $color-red, 0 0 1em $color-blue, 0 0 0.2em $color-blue;
+        text-shadow: $from-shadow;
       }
       to {
-        text-shadow: 1px 1px 2px $color-red-300, 0 0 1em $color-blue-300, 0 0 0.2em $color-blue-300;
+        text-shadow: $to-shadow;
       }
     }
-    animation: pulse 4s $easing-standard infinite alternate;
+    animation: pulse 5s infinite alternate;
   }
   & > .metric {
     width: 95%;
