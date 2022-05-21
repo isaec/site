@@ -13,16 +13,17 @@
     $from-shadow: ();
     $to-shadow: ();
 
-    $blur: 6px;
+    $blur: 5px;
     // multipliers for 1px
-    $vert-offset: 2;
-    $hori-offset-from: 2;
-    $hori-offset-to: 4;
+    $vert-offset-from: 0;
+    $vert-offset-to: 1;
+    $hori-offset-from: 1;
+    $hori-offset-to: 3;
 
     @for $i from 1 through length($rainbow) {
-      $color: list.nth($rainbow, $i);
-      $from-shadow: list.append($from-shadow, $hori-offset-from*$i + unquote("px") $vert-offset*$i + unquote("px") $blur $color);
-      $to-shadow: list.append($to-shadow, $hori-offset-to*$i + unquote("px") $vert-offset*$i + unquote("px") $blur $color);
+      $color: darken(list.nth($rainbow, $i), 30%);
+      $from-shadow: list.append($from-shadow, $hori-offset-from*$i + unquote("px") $vert-offset-from*$i + unquote("px") $blur $color);
+      $to-shadow: list.append($to-shadow, $hori-offset-to*$i + unquote("px") $vert-offset-to*$i + unquote("px") $blur $color);
     }
 
     $from-shadow: list.zip($from-shadow);
@@ -35,7 +36,7 @@
         text-shadow: $to-shadow;
       }
     }
-    animation: pulse 5s infinite alternate;
+    animation: pulse 25s infinite alternate;
   }
   & > .metric {
     width: 95%;
