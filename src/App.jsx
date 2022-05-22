@@ -1,10 +1,10 @@
 import styles from "./App.module.scss";
-import Card from "./Card";
+import Metric from "./components/Metric";
 
 const App = () => {
   return (
     <div className={styles.App}>
-      <Card />
+      <Metric />
     </div>
   );
 };

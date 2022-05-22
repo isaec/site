@@ -1,12 +1,13 @@
-import styles from "./Card.module.scss";
+import styles from "./Metric.module.scss";
+import Card from "./Card.jsx";
 
-const Card = () => (
-  <div className={styles.Card}>
+const Metric = () => (
+  <Card>
     <p>isaac r; me.</p>
     <img
       className={styles.metric}
       src="https://raw.githubusercontent.com/isaec/isaec/main/github-metrics.svg"
     />
-  </div>
+  </Card>
 );
-export default Card;
+export default Metric;

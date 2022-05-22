@@ -1,0 +1,7 @@
+@use "../config" as *;
+
+.metric {
+  object-fit: contain;
+  min-width: 0px;
+  padding-right: $size-2;
+}
