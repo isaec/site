@@ -1,6 +1,9 @@
 @use "../config" as *;
 
-.metric {
+.Metric {
+  .Head {
+    padding-left: 1.5%;
+  }
   object-fit: contain;
   min-width: 0px;
   padding-right: $size-2;
