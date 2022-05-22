@@ -1,6 +1,7 @@
 @use "../config" as *;
 
 .Card {
+  width: 100%;
   background-color: $color-grey-900;
   border-radius: $radius-lg;
   padding: $size-2;
