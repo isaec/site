@@ -11,7 +11,7 @@ const App = () => {
         <Head text="who?" />
         <p>test of the nature of god</p>
       </Card>
-      <Card>
+      <Card pad>
         <Head text="third card !" />
         <p>what is the meaning of this?</p>
         <Head text="why ??" />

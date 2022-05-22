@@ -6,6 +6,9 @@
   background-color: $color-grey-900;
   border-radius: $radius-lg;
   padding: $size-2;
+  &.pad {
+    padding: $size-4;
+  }
   will-change: transform; // this little nasty thing will prevent lag on mobile, somehow
   box-shadow: $elevation-5;
   &.tall {
