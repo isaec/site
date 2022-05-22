@@ -9,7 +9,6 @@
   &.pad {
     padding: $size-4;
   }
-  will-change: transform; // this little nasty thing will prevent lag on mobile, somehow
   box-shadow: $elevation-5;
   &.tall {
     grid-row: span 2;
