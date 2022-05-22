@@ -27,9 +27,9 @@ const App = () => {
         <Head text="fifth" />
         <p>tis one tall</p>
       </Card>
-      <Card tall>
+      <Card>
         <Head text="six" />
-        <p>also tall</p>
+        <p>short lil boy</p>
       </Card>
     </div>
   );
