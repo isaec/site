@@ -39,13 +39,9 @@
     animation: pulse 25s infinite alternate;
   }
   & > .metric {
-    width: 95%;
     object-fit: contain;
     min-width: 0px;
-    // contain: paint;
     padding-right: $size-2;
-    margin: 0px;
-    // margin: 0 $size-2;
   }
   box-shadow: $elevation-5;
 }
