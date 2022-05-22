@@ -2,8 +2,8 @@
 
 .App {
   display: grid;
-  grid-template-columns: $grid-page;
-  & > * {
-    grid-column: $grid-page-main;
-  }
+  justify-items: center;
+  gap: $size-5;
+  padding: $size-5;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 }

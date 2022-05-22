@@ -3,7 +3,7 @@
 
 .Card {
   background-color: $color-grey-900;
-  margin: $size-5 auto;
+  width: fit-content;
   border-radius: $radius-lg;
   padding: $size-2;
   will-change: transform; // this little nasty thing will prevent lag on mobile, somehow
