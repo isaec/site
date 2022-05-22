@@ -5,9 +5,10 @@
   background-color: $color-grey-900;
   margin: $size-5 auto;
   border-radius: $radius-lg;
+  padding: $size-2;
   will-change: transform; // this little nasty thing will prevent lag on mobile, somehow
   & > p {
-    margin: $size-2 $size-4;
+    padding-left: 1.5%;
     font-size: $scale-5;
 
     $from-shadow: ();
@@ -43,7 +44,8 @@
     object-fit: contain;
     min-width: none;
     // contain: paint;
-    margin: 0 $size-2;
+    padding-right: $size-2;
+    // margin: 0 $size-2;
   }
-  box-shadow: $elevation-7;
+  box-shadow: $elevation-5;
 }
