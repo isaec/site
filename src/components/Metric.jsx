@@ -3,7 +3,7 @@ import Card from "./Card.jsx";
 import Head from "./Head.jsx";
 
 const Metric = () => (
-  <Card>
+  <Card tall>
     <Head className={styles.Head} text="isaac r; me." />
     <img
       className={styles.Metric}

@@ -2,9 +2,13 @@
 
 .Card {
   width: 100%;
+  height: 100%;
   background-color: $color-grey-900;
   border-radius: $radius-lg;
   padding: $size-2;
   will-change: transform; // this little nasty thing will prevent lag on mobile, somehow
   box-shadow: $elevation-5;
+  &.tall {
+    grid-row: 1 / 3;
+  }
 }

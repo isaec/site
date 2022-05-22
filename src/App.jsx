@@ -17,6 +17,12 @@ const App = () => {
         <Head text="why ??" />
         <p>makes sense to me...</p>
       </Card>
+      <Card>
+        <Head text="fourth" />
+        <p>how many cards does a person need!</p>
+        <Head text="answer:" />
+        <p>more!</p>
+      </Card>
     </div>
   );
 };
