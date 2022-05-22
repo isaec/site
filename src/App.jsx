@@ -11,7 +11,7 @@ const App = () => {
         <Head text="who?" />
         <p>test of the nature of god</p>
       </Card>
-      <Card pad>
+      <Card>
         <Head text="third card !" />
         <p>what is the meaning of this?</p>
         <Head text="why ??" />
@@ -22,6 +22,14 @@ const App = () => {
         <p>how many cards does a person need!</p>
         <Head text="answer:" />
         <p>more!</p>
+      </Card>
+      <Card tall>
+        <Head text="fifth" />
+        <p>tis one tall</p>
+      </Card>
+      <Card tall>
+        <Head text="six" />
+        <p>also tall</p>
       </Card>
     </div>
   );

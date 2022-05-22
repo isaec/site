@@ -5,7 +5,7 @@ const Card = (props) => (
     classList={{
       [styles.Card]: true,
       [styles.tall]: props.tall,
-      [styles.pad]: props.pad,
+      [styles.pad]: props.pad ?? true,
     }}
   >
     {props.children}
