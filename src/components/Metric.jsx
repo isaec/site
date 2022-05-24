@@ -1,6 +1,6 @@
 import styles from "./Metric.module.scss";
-import Card from "./Card.jsx";
-import Head from "./Head.jsx";
+import Card from "./Card";
+import Head from "./Head";
 
 const Metric = () => (
   <Card tall pad={false} className={styles.Card}>
