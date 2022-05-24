@@ -2,10 +2,11 @@
 import Card from "./Card";
 import qr from "qrcode";
 import Head from "./Head";
+import { createResource, createSignal } from "solid-js";
 
-const QRCode = (props) => {
+const makeQRCodeCanvas = async (url) => {
   const canvas = document.createElement("canvas");
-  qr.toCanvas(canvas, props.url, {
+  await qr.toCanvas(canvas, url, {
     margin: 0,
     errorCorrectionLevel: "L",
     color: {
@@ -13,10 +14,22 @@ const QRCode = (props) => {
       dark: "#f9fafb" /* $color-grey-50 */,
     },
   });
+  return canvas;
+};
+
+const QRCode = (props) => {
+  const [url, setUrl] = createSignal(props.url);
+  const [canvas] = createResource(url, makeQRCodeCanvas);
   return (
     <Card>
-      <Head text={props.url} />
+      <Head text={url} />
       {canvas}
+      <input
+        value={url()}
+        onInput={(event) => {
+          setUrl(event.target.value);
+        }}
+      ></input>
     </Card>
   );
 };
