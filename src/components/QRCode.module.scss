@@ -1,0 +1,9 @@
+@use "../config" as *;
+
+canvas.qr {
+  // ick but easy
+  width: 100% !important;
+  height: auto !important;
+  margin: auto;
+  padding: $size-3;
+}
