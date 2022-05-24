@@ -18,18 +18,12 @@ const makeQRCodeCanvas = async (url) => {
 };
 
 const QRCode = (props) => {
-  const [url, setUrl] = createSignal(props.url);
+  const url = props.url;
   const [canvas] = createResource(url, makeQRCodeCanvas);
   return (
     <Card>
       <Head text={url} />
       {canvas}
-      <input
-        value={url()}
-        onInput={(event) => {
-          setUrl(event.target.value);
-        }}
-      ></input>
     </Card>
   );
 };

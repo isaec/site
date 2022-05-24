@@ -12,7 +12,7 @@ const App = () => {
         <Head text="who?" />
         <p>me!</p>
       </Card>
-      <QRCode url="example.com" />
+      <QRCode url={window.location.host} />
     </div>
   );
 };
