@@ -13,7 +13,7 @@ const makeQRCodeCanvas = async (url) => {
     errorCorrectionLevel: "L",
     color: {
       light: "#10181C" /* $color-grey-900 */,
-      dark: "#f9fafb" /* $color-grey-50 */,
+      dark: "#d4d7dd" /* $color-grey-300 */,
     },
   });
   return canvas;
