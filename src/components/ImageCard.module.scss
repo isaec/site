@@ -1,5 +1,9 @@
 @use "../config" as *;
 
+.ImageCard {
+  display: flex;
+}
+
 img.image {
   &.round {
     border-radius: $radius-full;

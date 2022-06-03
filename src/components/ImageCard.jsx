@@ -3,7 +3,7 @@ import Card from "./Card";
 import styles from "./ImageCard.module.scss";
 
 const ImageCard = (props) => (
-  <Card>
+  <Card className={styles.ImageCard}>
     <img
       src={props.src}
       classList={{
