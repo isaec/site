@@ -6,7 +6,11 @@
 
 img.image {
   &.round {
-    border-radius: $radius-full;
+    transition: border-radius 2s $easing-standard 0s;
+    &:hover{
+      border-radius: $radius-lg;
+    }
+    border-radius: 50%;
   }
   padding: $size-2;
   margin: auto;
