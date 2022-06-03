@@ -13,7 +13,7 @@ const App = () => {
         <Head text="who?" />
         <p>me!</p>
       </Card>
-      <ImageCard src="https://github.com/isaec.png" />
+      <ImageCard round src="https://github.com/isaec.png" />
       <QRCode url={window.location.host} />
     </div>
   );

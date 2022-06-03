@@ -1,1 +1,9 @@
 @use "../config" as *;
+
+img.image {
+  &.round {
+    border-radius: $radius-full;
+  }
+  padding: $size-2;
+  margin: auto;
+}
