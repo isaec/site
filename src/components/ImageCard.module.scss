@@ -4,9 +4,8 @@
 
 .ImageCard {
   display: flex;
+  padding: $size-8;
 }
-
-
 
 img.image {
   &.round {
