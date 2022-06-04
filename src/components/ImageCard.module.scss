@@ -1,8 +1,11 @@
 @use "../config" as *;
+@use "sass:math";
 
 .ImageCard {
   display: flex;
 }
+
+
 
 img.image {
   &.round {
@@ -14,4 +17,18 @@ img.image {
   }
   padding: $size-2;
   margin: auto;
+  
+  $convert: math.div(math.$pi, 180);
+  @function shadow($angle, $color) {
+    @return math.cos($angle * $convert) * 5+px math.sin($angle * $convert) * 5+px 10px 7px $color;
+  }
+
+  @keyframes highlight {
+    @for $degrees from 0 through 360 {
+      #{math.div($degrees, 3.6)}% {
+        box-shadow: shadow($degrees, $color-pink), shadow($degrees + 180, $color-red),;
+      }
+    }
+  }
+  animation: highlight 15s infinite;
 }
