@@ -3,6 +3,7 @@
 
 .Head {
   font-size: $scale-5;
+  overflow-wrap: break-word;
 
   $from-shadow: ();
   $to-shadow: ();
