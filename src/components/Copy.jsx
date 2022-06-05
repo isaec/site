@@ -1,6 +1,8 @@
 import Card from "./Card";
 import Head from "./Head";
 
+import { dependencies, devDependencies } from "../../package.json";
+
 import styles from "./Copy.module.scss";
 
 export const Who = () => (
@@ -84,9 +86,9 @@ export const TechStack = () => (
     <Head text="tech stack?" />
     <p>
       This site is being rendered by your web client, and hosted on github
-      pages.
+      pages. These lists are generated from package.json at build time.
     </p>
-    <List label="dependencies">{["qrcode", "solid-js"]}</List>
-    <List label="devDependencies">{["sass", "vite", "vite-plugin-solid"]}</List>
+    <List label="dependencies">{Object.keys(dependencies)}</List>
+    <List label="devDependencies">{Object.keys(devDependencies)}</List>
   </Card>
 );
