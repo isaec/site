@@ -8,5 +8,9 @@
   flex-direction: column;
   gap: $size-5;
 
-  grid-template-rows: min-content;
+  @for $i from 2 through 5 {
+    &.contains_#{$i} {
+      grid-template-rows: repeat($i - 1, min-content) 1fr;
+    }
+  }
 }

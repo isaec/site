@@ -5,6 +5,8 @@ import { dependencies, devDependencies } from "../../package.json";
 
 import styles from "./Copy.module.scss";
 
+const Code = (props) => <span className={styles.Code}>{props.children}</span>;
+
 export const Who = () => (
   <Card className={styles.paragraph_gap}>
     <Head text="who?" />
@@ -15,7 +17,16 @@ export const Who = () => (
   </Card>
 );
 
-const Code = (props) => <span className={styles.Code}>{props.children}</span>;
+export const SayMore = () => (
+  <Card className={styles.paragraph_gap}>
+    <Head text="say more..." />
+    <p>
+      Backpacker, dev, rpg and video game enthusiast. <Code>he/him/his</Code>.
+      Crypto skeptic! Sometimes weird. Dysgraphic.
+    </p>
+    <p>I enjoy making things, especially if I learn something from it.</p>
+  </Card>
+);
 
 const Table = (props) => {
   return (

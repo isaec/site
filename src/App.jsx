@@ -13,6 +13,7 @@ const App = () => {
       <Metric />
       <VGroup>
         <Copy.Who />
+        <Copy.SayMore />
         <Copy.Contact />
       </VGroup>
       <ImageCard
