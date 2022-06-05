@@ -36,3 +36,27 @@
     }
   }
 }
+
+.List {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .25em;
+  & > .assignment {
+    & > span:nth-child(1) {
+      color: $color-blue-700;
+    }
+    & > span:nth-child(2) {
+      color: $color-blue-500;
+    }
+  }
+  // & > .bracket {
+  //   grid-column: -1 / 1;
+  // }
+  & > .value {
+    padding-left: 2em;
+    color: $color-orange-300;
+    & > span {
+      color: $color-grey-300;
+    }
+  }
+}

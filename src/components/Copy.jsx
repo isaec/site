@@ -39,6 +39,29 @@ const Table = (props) => {
   );
 };
 
+const List = (props) => {
+  return (
+    <div className={styles.List}>
+      <p classList={{ [styles.assignment]: true, [styles.bracket]: true }}>
+        <span>const </span>
+        <span>{props.label}</span>
+        {" = ["}
+      </p>
+      <For each={props.children}>
+        {(elem, index) => (
+          <>
+            <p className={styles.value}>
+              {`"${elem}"`}
+              {index() + 1 !== props.children.length ? <span>{","}</span> : ""}
+            </p>
+          </>
+        )}
+      </For>
+      <p className={styles.bracket}>{"];"}</p>
+    </div>
+  );
+};
+
 export const Contact = () => (
   <Card className={styles.paragraph_gap}>
     <Head text="contact me!" />
@@ -63,11 +86,7 @@ export const TechStack = () => (
       This site is being rendered by your web client, and hosted on github
       pages.
     </p>
-    <Table label="stack">
-      {[
-        ["framework", "solidjs"],
-        ["css_preprocessor", "scss"],
-      ]}
-    </Table>
+    <List label="dependencies">{["qrcode", "solid-js"]}</List>
+    <List label="devDependencies">{["sass", "vite", "vite-plugin-solid"]}</List>
   </Card>
 );
