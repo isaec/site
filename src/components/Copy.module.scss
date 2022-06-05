@@ -1,0 +1,5 @@
+.paragraph_gap {
+  & p:not(:first-child):not(:last-child) {
+    margin-bottom: 1em;
+  }
+}

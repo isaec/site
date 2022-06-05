@@ -4,27 +4,19 @@ import Head from "./components/Head";
 import ImageCard from "./components/ImageCard";
 import Metric from "./components/Metric";
 import QRCode from "./components/QRCode";
+import * as Copy from "./components/Copy";
 
 const App = () => {
   return (
     <div className={styles.App}>
       <Metric />
-      <Card>
-        <Head text="who?" />
-        <p>
-          A student and software developer living in California. I do freelance
-          web work, and make things (like this) for fun.
-        </p>
-        <p>
-          Always interested in more freelance work, internships, or software
-          volunteering.
-        </p>
-      </Card>
+      <Copy.Who />
       <ImageCard
         round
         src="https://github.com/isaec.png"
         alt="github profile picture"
       />
+      <Copy.Contact />
       <QRCode url={window.location.host} />
     </div>
   );
