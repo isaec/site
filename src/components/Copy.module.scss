@@ -1,3 +1,5 @@
+@use "../config" as *;
+
 .paragraph_gap {
   & > p:not(:first-child):not(:last-child) {
     margin-bottom: 1em;
@@ -7,8 +9,17 @@
 .Table {
   display: grid;
   grid-template-columns: min-content 1fr;
-  & > p:nth-child(odd) {
-    padding-right: .75em;
-  }
   gap: .25em;
+
+  & > .bracket {
+    grid-column: -1 / 1;
+  }
+  & > .key {
+    padding-right: .75em;
+    padding-left: 2em;
+    color: $color-blue-300;
+  }
+  & > .value {
+    color: $color-orange-300;
+  }
 }

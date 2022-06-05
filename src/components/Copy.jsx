@@ -13,22 +13,38 @@ export const Who = () => (
   </Card>
 );
 
-const Table = (props) => <div className={styles.Table}>{props.children}</div>;
+const Table = (props) => {
+  return (
+    <div className={styles.Table}>
+      <p className={styles.bracket}>{"const contacts = {"}</p>
+      <For each={props.contacts}>
+        {(contact, index) => (
+          <>
+            <p className={styles.key}>{`${contact[0]}:`}</p>
+            <p className={styles.value}>{`"${contact[1]}"${
+              index() + 1 !== props.contacts.length ? "," : ""
+            }`}</p>
+          </>
+        )}
+      </For>
+      <p className={styles.bracket}>{"};"}</p>
+    </div>
+  );
+};
 
 export const Contact = () => (
   <Card className={styles.paragraph_gap}>
     <Head text="contact me!" />
     <p>
       If you have software internship, freelance, work, or volunteering
-      opportunities, let me know. Feel free to just reach out and chat.
+      opportunities, let me know. Alternatively, just reach out and chat.
     </p>
-    <Table>
-      <p>discord:</p>
-      <p>isaac#9000</p>
-      <p>github:</p>
-      <p>isaec</p>
-      <p>email:</p>
-      <p>coming soon!</p>
-    </Table>
+    <Table
+      contacts={[
+        ["discord", "isaac#9000"],
+        ["github", "isaec"],
+        ["email", "coming soon!"],
+      ]}
+    />
   </Card>
 );
