@@ -19,10 +19,6 @@ export const Contact = () => (
     <p>
       If you have software internship, freelance, work, or volunteering
       opportunities, let me know. Feel free to just reach out and chat.
-      <p>
-        Always interested in freelance work, internships, or software
-        volunteering opportunities.
-      </p>
     </p>
     <p>discord: isaac#9000</p>
     <p>github: isaec</p>

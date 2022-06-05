@@ -1,5 +1,9 @@
 .paragraph_gap {
-  & p:not(:first-child):not(:last-child) {
+  & > p:not(:first-child):not(:last-child) {
     margin-bottom: 1em;
   }
+}
+
+.justify {
+  text-align: justify;
 }
