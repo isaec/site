@@ -13,6 +13,8 @@ export const Who = () => (
   </Card>
 );
 
+const Table = (props) => <div className={styles.Table}>{props.children}</div>;
+
 export const Contact = () => (
   <Card className={styles.paragraph_gap}>
     <Head text="contact me!" />
@@ -20,7 +22,13 @@ export const Contact = () => (
       If you have software internship, freelance, work, or volunteering
       opportunities, let me know. Feel free to just reach out and chat.
     </p>
-    <p>discord: isaac#9000</p>
-    <p>github: isaec</p>
+    <Table>
+      <p>discord:</p>
+      <p>isaac#9000</p>
+      <p>github:</p>
+      <p>isaec</p>
+      <p>email:</p>
+      <p>coming soon!</p>
+    </Table>
   </Card>
 );

@@ -4,6 +4,11 @@
   }
 }
 
-.justify {
-  text-align: justify;
+.Table {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  & > p:nth-child(odd) {
+    padding-right: .75em;
+  }
+  gap: .25em;
 }
