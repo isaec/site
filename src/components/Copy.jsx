@@ -16,14 +16,19 @@ export const Who = () => (
 const Table = (props) => {
   return (
     <div className={styles.Table}>
-      <p className={styles.bracket}>{"const contacts = {"}</p>
+      <p classList={{ [styles.assignment]: true, [styles.bracket]: true }}>
+        <span>const </span>
+        <span>contacts</span>
+        {" = {"}
+      </p>
       <For each={props.contacts}>
         {(contact, index) => (
           <>
             <p className={styles.key}>{`${contact[0]}:`}</p>
-            <p className={styles.value}>{`"${contact[1]}"${
-              index() + 1 !== props.contacts.length ? "," : ""
-            }`}</p>
+            <p className={styles.value}>
+              {`"${contact[1]}"`}
+              {index() + 1 !== props.contacts.length ? <span>{","}</span> : ""}
+            </p>
           </>
         )}
       </For>

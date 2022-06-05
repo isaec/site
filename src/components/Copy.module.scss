@@ -10,7 +10,14 @@
   display: grid;
   grid-template-columns: min-content 1fr;
   gap: .25em;
-
+  & > .assignment {
+    & > span:nth-child(1) {
+      color: $color-blue-700;
+    }
+    & > span:nth-child(2) {
+      color: $color-blue-500;
+    }
+  }
   & > .bracket {
     grid-column: -1 / 1;
   }
@@ -21,5 +28,8 @@
   }
   & > .value {
     color: $color-orange-300;
+    & > span {
+      color: $color-grey-300;
+    }
   }
 }
