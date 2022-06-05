@@ -9,7 +9,6 @@
 .Table {
   display: grid;
   grid-template-columns: min-content 1fr;
-  gap: .25em;
   & > .assignment {
     & > span:nth-child(1) {
       color: $color-blue-700;
@@ -22,7 +21,7 @@
     grid-column: -1 / 1;
   }
   & > .key {
-    padding-right: .75em;
+    padding-right: 1em;
     padding-left: 2em;
     color: $color-blue-300;
     & > a:visited {
@@ -40,7 +39,6 @@
 .List {
   display: grid;
   grid-template-columns: 1fr;
-  gap: .25em;
   & > .assignment {
     & > span:nth-child(1) {
       color: $color-blue-700;
