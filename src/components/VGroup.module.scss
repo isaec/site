@@ -1,0 +1,12 @@
+@use "../config" as *;
+
+.VGroup {
+  grid-row: span 2;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: $size-5;
+
+  grid-template-rows: min-content;
+}

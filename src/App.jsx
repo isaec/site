@@ -5,18 +5,21 @@ import ImageCard from "./components/ImageCard";
 import Metric from "./components/Metric";
 import QRCode from "./components/QRCode";
 import * as Copy from "./components/Copy";
+import VGroup from "./components/VGroup";
 
 const App = () => {
   return (
     <div className={styles.App}>
       <Metric />
-      <Copy.Who />
+      <VGroup>
+        <Copy.Who />
+        <Copy.Contact />
+      </VGroup>
       <ImageCard
         round
         src="https://github.com/isaec.png"
         alt="github profile picture"
       />
-      <Copy.Contact />
       <Copy.TechStack />
       <QRCode url={window.location.host} />
     </div>
