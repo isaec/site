@@ -6,6 +6,15 @@
   }
 }
 
+.Code {
+  background-color: $color-grey-800;
+  border-radius: .2em;
+  padding-right: .25em;
+  margin-right: -.25em;
+  padding-left: .25em;
+  margin-left: -.25em;
+}
+
 .Table {
   display: grid;
   grid-template-columns: min-content 1fr;

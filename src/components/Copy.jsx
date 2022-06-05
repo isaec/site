@@ -15,6 +15,8 @@ export const Who = () => (
   </Card>
 );
 
+const Code = (props) => <span className={styles.Code}>{props.children}</span>;
+
 const Table = (props) => {
   return (
     <div className={styles.Table}>
@@ -86,7 +88,8 @@ export const TechStack = () => (
     <Head text="tech stack?" />
     <p>
       This site is being rendered by your web client, and hosted on github
-      pages. These lists are generated from package.json at build time.
+      pages. These lists are generated from <Code>package.json</Code> at build
+      time.
     </p>
     <List label="dependencies">{Object.keys(dependencies)}</List>
     <List label="devDependencies">{Object.keys(devDependencies)}</List>
