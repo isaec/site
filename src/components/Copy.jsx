@@ -18,18 +18,18 @@ const Table = (props) => {
     <div className={styles.Table}>
       <p classList={{ [styles.assignment]: true, [styles.bracket]: true }}>
         <span>const </span>
-        <span>contacts</span>
+        <span>{props.label}</span>
         {" = {"}
       </p>
-      <For each={props.contacts}>
-        {(contact, index) => (
+      <For each={props.children}>
+        {(row, index) => (
           <>
             <p className={styles.key}>
-              <a href={contact[2]}>{contact[0]}</a>:
+              <a href={row[2]}>{row[0]}</a>:
             </p>
             <p className={styles.value}>
-              {`"${contact[1]}"`}
-              {index() + 1 !== props.contacts.length ? <span>{","}</span> : ""}
+              {`"${row[1]}"`}
+              {index() + 1 !== props.children.length ? <span>{","}</span> : ""}
             </p>
           </>
         )}
@@ -46,12 +46,28 @@ export const Contact = () => (
       If you have software internship, freelance, work, or volunteering
       opportunities, let me know. Alternatively, just reach out and chat.
     </p>
-    <Table
-      contacts={[
+    <Table label="contacts">
+      {[
         ["discord", "isaac#9000"],
         ["github", "isaec", "https://github.com/isaec"],
         ["email", "coming soon!"],
       ]}
-    />
+    </Table>
+  </Card>
+);
+
+export const TechStack = () => (
+  <Card className={styles.paragraph_gap}>
+    <Head text="tech stack?" />
+    <p>
+      This site is being rendered by your web client, and hosted on github
+      pages.
+    </p>
+    <Table label="stack">
+      {[
+        ["framework", "solidjs"],
+        ["css_preprocessor", "scss"],
+      ]}
+    </Table>
   </Card>
 );

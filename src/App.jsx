@@ -17,6 +17,7 @@ const App = () => {
         alt="github profile picture"
       />
       <Copy.Contact />
+      <Copy.TechStack />
       <QRCode url={window.location.host} />
     </div>
   );
