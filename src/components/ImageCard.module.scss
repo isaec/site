@@ -9,7 +9,7 @@
 
 img.image {
   &.round {
-    transition: border-radius 2s $easing-standard 0s;
+    transition: border-radius 2s $easing-standard .1s;
     &:hover{
       border-radius: $radius-lg;
     }

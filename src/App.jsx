@@ -11,7 +11,14 @@ const App = () => {
       <Metric />
       <Card>
         <Head text="who?" />
-        <p>me!</p>
+        <p>
+          A student and software developer living in California. I do freelance
+          web work, and make things (like this) for fun.
+        </p>
+        <p>
+          Always interested in more freelance work, internships, or software
+          volunteering.
+        </p>
       </Card>
       <ImageCard
         round
