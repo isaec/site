@@ -1,12 +1,17 @@
 @use "config" as *;
 
+@font-face {
+  font-family: "droid sans mono";
+  src: url(/src/fonts/droid-sans-mono.woff2);
+}
+
 :root {
   color-scheme: dark;
 }
 
 body {
   margin: 0;
-  font-family: $font-mono;
+  font-family: droid sans mono;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
