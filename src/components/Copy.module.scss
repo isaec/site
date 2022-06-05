@@ -25,6 +25,9 @@
     padding-right: .75em;
     padding-left: 2em;
     color: $color-blue-300;
+    & > a:visited {
+      color: $color-purple-300;
+    }
   }
   & > .value {
     color: $color-orange-300;

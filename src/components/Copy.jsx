@@ -24,7 +24,9 @@ const Table = (props) => {
       <For each={props.contacts}>
         {(contact, index) => (
           <>
-            <p className={styles.key}>{`${contact[0]}:`}</p>
+            <p className={styles.key}>
+              <a href={contact[2]}>{contact[0]}</a>:
+            </p>
             <p className={styles.value}>
               {`"${contact[1]}"`}
               {index() + 1 !== props.contacts.length ? <span>{","}</span> : ""}
@@ -47,7 +49,7 @@ export const Contact = () => (
     <Table
       contacts={[
         ["discord", "isaac#9000"],
-        ["github", "isaec"],
+        ["github", "isaec", "https://github.com/isaec"],
         ["email", "coming soon!"],
       ]}
     />
