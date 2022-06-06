@@ -12,12 +12,5 @@ export const Vertical = (props) => (
 );
 
 export const Horizontal = (props) => (
-  <div
-    classList={{
-      [styles.Horizontal]: true,
-      [styles[`contains_${props.children.length}`]]: true,
-    }}
-  >
-    {props.children}
-  </div>
+  <div className={styles.Horizontal}>{props.children}</div>
 );
