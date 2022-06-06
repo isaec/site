@@ -21,11 +21,13 @@
   & > .key {
     padding-right: 1em;
     padding-left: 2em;
-    &, * > a {
+    color: $color-blue-300;
+
+    & > a {
       color: $color-blue-300;
-    }
-    & > a:visited {
-      color: $color-purple-300;
+      &:visited {
+        color: $color-purple-300;
+      }
     }
   }
 

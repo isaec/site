@@ -12,7 +12,10 @@ export const Table = (props) => {
         {(row, index) => (
           <>
             <p className={styles.key}>
-              <a href={row[2]}>{row[0]}</a>:
+              <a href={row[2]} target="_blank" rel="noopener noreferrer">
+                {row[0]}
+              </a>
+              :
             </p>
             <p className={styles.value}>
               {`"${row[1]}"`}
