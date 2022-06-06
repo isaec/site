@@ -6,7 +6,10 @@ import { dependencies, devDependencies } from "../../package.json";
 
 import styles from "./Copy.module.scss";
 
-const Code = (props) => <span className={styles.Code}>{props.children}</span>;
+/** not copy, a simple span element */
+export const Code = (props) => (
+  <span className={styles.Code}>{props.children}</span>
+);
 
 export const Who = () => (
   <Card className={styles.paragraph_gap}>
