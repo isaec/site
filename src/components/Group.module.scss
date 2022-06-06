@@ -27,8 +27,9 @@
     height: auto;
     flex-grow: 1;
     flex-shrink: 1;
-    // this nasty hack is the equivalent of flex-basis: min-width, for safari support
+    // this nasty hack is the equivalent of flex-basis: min-content, for safari support
     &:not(:last-child) {
+      // this query checks if we are in one card width stack, and makes sure cards go to edge if so
       @media screen and (max-width: ((App.$col-width * 2 + App.$gap * 3) - .1 /* no good very bad < vs <= */)) {
         max-width: 100%;
       }
