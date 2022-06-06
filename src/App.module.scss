@@ -1,10 +1,22 @@
 @use "config" as *;
 
 .App {
+  $col-width: 500px;
+  $gap: $size-5;
+  $max-cols: 3;
+
   display: grid;
   justify-items: center;
   justify-content: center;
-  gap: $size-5;
-  padding: $size-5;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 500px));
+  gap: $gap;
+  padding: $gap;
+  grid-template-columns: repeat(auto-fill, minmax(250px, $col-width));
+  max-width: 
+    // the width of each column
+    $max-cols * $col-width
+    // the gaps between each column
+    + ($max-cols - 1) * $gap
+    // the padding on the edges
+    + $gap * 2;
+  margin: auto;
 }
