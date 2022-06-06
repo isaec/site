@@ -21,6 +21,7 @@ button.disable {
   flex-grow: 1;
   // end reset
 
+  padding: $size-4;
   font-size: $scale-4;
   border-radius: $radius-md;
   transition: background-color .75s $easing-standard;
