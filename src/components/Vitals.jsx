@@ -6,18 +6,13 @@ import { createResource } from "solid-js";
 
 import styles from "./Vitals.module.scss";
 
-const callbackAsPromise = (fn) => {
-  return async () => {
-    return new Promise((resolve) => {
-      fn(resolve, true);
-    });
-  };
-};
+const createResourceCallback = (fn) =>
+  createResource(async () => new Promise((resolve) => fn(resolve, true)));
 
 const Vitals = () => {
-  const [LCP] = createResource(callbackAsPromise(getLCP));
-  const [FID] = createResource(callbackAsPromise(getFID));
-  const [CLS] = createResource(callbackAsPromise(getCLS));
+  const [LCP] = createResourceCallback(getLCP);
+  const [FID] = createResourceCallback(getFID);
+  const [CLS] = createResourceCallback(getCLS);
 
   return (
     <Card className={styles.Vitals}>
