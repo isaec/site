@@ -3,7 +3,7 @@ import Card from "./Card";
 import Head from "./Head";
 
 const Metric = () => (
-  <Card tall pad={false} className={styles.Card}>
+  <Card tall pad={false}>
     <Head className={styles.Head} text="isaac r; me." />
     <img
       className={styles.Metric}

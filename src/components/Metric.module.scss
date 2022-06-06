@@ -1,12 +1,9 @@
 @use "../config" as *;
 
-.Card {
-  will-change: transform; // this little nasty thing will prevent lag on mobile, somehow
-}
-
 .Metric {
   object-fit: contain;
   min-width: 0px;
+  will-change: transform; // this little nasty thing will prevent lag on mobile, somehow
 }
 
 .Head {
