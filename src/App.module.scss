@@ -1,0 +1,10 @@
+@use "config" as *;
+
+.App {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  gap: $size-5;
+  padding: $size-5;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 500px));
+}

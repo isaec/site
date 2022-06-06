@@ -1,0 +1,16 @@
+@use "../config" as *;
+
+.paragraph_gap {
+  & > p:not(:first-child):not(:last-child) {
+    margin-bottom: 1em;
+  }
+}
+
+.Code {
+  background-color: $color-grey-800;
+  border-radius: .2em;
+  padding-right: .25em;
+  margin-right: -.25em;
+  padding-left: .25em;
+  margin-left: -.25em;
+}

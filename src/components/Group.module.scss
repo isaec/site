@@ -1,0 +1,34 @@
+@use "../config" as *;
+
+.Vertical {
+  grid-row: span 2;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  gap: $size-5;
+
+  @for $i from 2 through 5 {
+    &.contains_#{$i} {
+      grid-template-rows: repeat($i - 1, min-content) 1fr;
+    }
+  }
+}
+
+.Horizontal {
+  grid-column: -1 / 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $size-5;
+  & > * {
+    flex-basis: min-content;
+    height: auto;
+    flex-grow: 1;
+    &:last-child {
+      // nasty hack but this will prevent layout shift in 2022
+      // this combo basically expresses that 1 should grow if nothing else can
+      flex-grow: 10000000;
+    }
+  }
+}

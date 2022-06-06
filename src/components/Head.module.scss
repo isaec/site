@@ -1,0 +1,38 @@
+@use "../config" as *;
+@use "sass:list";
+
+.Head {
+  font-size: $scale-5;
+  overflow-wrap: break-word;
+
+  $from-shadow: ();
+  $to-shadow: ();
+
+  $blur: 5px;
+  // multipliers for 1px
+  $vert-offset-from: 0;
+  $vert-offset-to: 1;
+  $hori-offset-from: 1;
+  $hori-offset-to: 2;
+
+  @for $i from 1 through length($rainbow) {
+    $color: darken(list.nth($rainbow, $i), 30%);
+    $from-shadow: list.append($from-shadow, $hori-offset-from*$i + unquote("px") $vert-offset-from*$i + unquote("px") $blur $color);
+    $to-shadow: list.append($to-shadow, $hori-offset-to*$i + unquote("px") $vert-offset-to*$i + unquote("px") $blur $color);
+  }
+
+  $from-shadow: list.zip($from-shadow);
+  $to-shadow: list.zip($to-shadow);
+
+  @keyframes pulse {
+    from {
+      text-shadow: $from-shadow;
+    }
+
+    to {
+      text-shadow: $to-shadow;
+    }
+  }
+
+  animation: pulse 25s infinite alternate;
+}
