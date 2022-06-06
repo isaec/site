@@ -23,9 +23,17 @@
   flex-wrap: wrap;
   gap: App.$gap;
   & > * {
-    flex-basis: min-content;
+    flex-basis: App.$col-width;
     height: auto;
     flex-grow: 1;
+    flex-shrink: 1;
+    // this nasty hack is the equivalent of flex-basis: min-width, for safari support
+    &:not(:last-child) {
+      @media screen and (max-width: ((App.$col-width * 2 + App.$gap * 3) - .1 /* no good very bad < vs <= */)) {
+        max-width: 100%;
+      }
+      max-width: min-content;
+    }
     &:last-child {
       // nasty hack but this will prevent layout shift in 2022
       // this combo basically expresses that 1 should grow if nothing else can
