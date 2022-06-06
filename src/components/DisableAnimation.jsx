@@ -8,12 +8,12 @@ import { createSignal } from "solid-js";
 const DisableAnimation = (props) => {
   const [status, setStatus] = createSignal(true);
   return (
-    <Card>
+    <Card className={styles.Card}>
       <Head text={`${status() ? "over" : "under"}whelmed?`}></Head>
-      <p>
+      <p className={styles.pad}>
         Sorry if all the colors are a little garish, or if the motion is
         overwhelming. It's all gated behind the{" "}
-        <Code>prefers-reduced-motion</Code> query, but you can also turn it{" "}
+        <Code>prefers-reduced-motion</Code> query, but you can also turn it all{" "}
         {status() ? "off" : "back on"} with this big button. Apologies!
       </p>
       <button
