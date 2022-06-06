@@ -13,4 +13,7 @@
   &.tall {
     grid-row: span 2;
   }
+  &.fillWidth {
+    grid-column: -1 / 1;
+  }
 }

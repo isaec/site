@@ -23,7 +23,7 @@ const QRCode = (props) => {
   const url = props.url;
   const [canvas] = createResource(url, makeQRCodeCanvas);
   return (
-    <Card>
+    <Card fillWidth>
       <Head text={url} />
       {canvas}
     </Card>

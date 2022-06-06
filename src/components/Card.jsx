@@ -6,6 +6,7 @@ const Card = (props) => (
       [styles.Card]: true,
       [styles.tall]: props.tall,
       [styles.pad]: props.pad ?? true,
+      [styles.fillWidth]: props.fillWidth,
       [props.className ?? props.class ?? undefined]: true,
     }}
   >
