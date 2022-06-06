@@ -6,6 +6,7 @@ import Metric from "./components/Metric";
 import QRCode from "./components/QRCode";
 import * as Copy from "./components/Copy";
 import VGroup from "./components/VGroup";
+import Vitals from "./components/Vitals";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       />
       <Copy.TechStack />
       <QRCode url={window.location.host} />
+      <Vitals />
     </div>
   );
 };
