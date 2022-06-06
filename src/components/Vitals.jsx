@@ -7,7 +7,16 @@ import { createResource } from "solid-js";
 import styles from "./Vitals.module.scss";
 
 const createResourceCallback = (fn) =>
-  createResource(async () => new Promise((resolve) => fn(resolve, true)));
+  createResource(async () => new Promise((resolve) => fn(resolve, true)), {
+    initialValue: {},
+  });
+
+const VitalTable = (props) => {
+  const [data] = createResourceCallback(props.fn);
+  return (
+    <Table label={props.label}>{[["value", data().value ?? "awaiting"]]}</Table>
+  );
+};
 
 const Vitals = () => {
   const [LCP] = createResourceCallback(getLCP);
@@ -21,13 +30,9 @@ const Vitals = () => {
         Web vitals are a measure of the quality of the user experience of a
         site.
       </p>
-      <Table label="vitals">
-        {[
-          ["lcp", LCP()?.value ?? "awaiting"],
-          ["fid", FID()?.value ?? "awaiting"],
-          ["cls", CLS()?.value ?? "awaiting"],
-        ]}
-      </Table>
+      <VitalTable label="lcp" fn={getLCP} />
+      <VitalTable label="fid" fn={getFID} />
+      <VitalTable label="cls" fn={getCLS} />
     </Card>
   );
 };
