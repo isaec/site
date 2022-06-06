@@ -25,12 +25,16 @@ img.image {
 
   @keyframes highlight {
     @for $degrees from 0 through 360 {
-      #{math.div($degrees, 3.6)}% {
-        $shadow-list: ();
-        @for $i from 1 through length($rainbow) {
-          $shadow-list: list.append($shadow-list, shadow($degrees + (($i - 1) * 45), list.nth($rainbow, $i)));
-        }
-        box-shadow: list.zip($shadow-list);
+      @if $degrees % 9 == 0 {
+        #{math.div($degrees, 3.6)}% {
+            $shadow-list: ();
+        
+            @for $i from 1 through length($rainbow) {
+              $shadow-list: list.append($shadow-list, shadow($degrees + (($i - 1) * 45), list.nth($rainbow, $i)));
+            }
+        
+            box-shadow: list.zip($shadow-list);
+          }
       }
     }
   }
