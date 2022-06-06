@@ -30,6 +30,11 @@ export const SayMore = () => (
     </p>
     <p>I enjoy making things, especially if I learn something from it.</p>
     <p>Interested in rare fish markets.</p>
+    <p>
+      If this site stutters, especially on mobile while scrolling, there sadly
+      isn't much to be done. Browsers do a bad job of large <Code>.svg</Code>{" "}
+      files, like the one used for stats.
+    </p>
   </Card>
 );
 
