@@ -26,10 +26,9 @@ export const SayMore = () => (
     <Head text="say more..." />
     <p>
       Backpacker, dev, rpg and video game enthusiast. <Code>he/him/his</Code>.
-      Crypto skeptic! Sometimes weird. Dysgraphic.
+      Cryptocurrency skeptic! Sometimes weird. Dysgraphic.
     </p>
     <p>I enjoy making things, especially if I learn something from it.</p>
-    <p>Interested in rare fish markets.</p>
     <p>
       If this site stutters, especially on mobile while scrolling, there sadly
       isn't much to be done. Browsers do a bad job of large <Code>.svg</Code>{" "}
