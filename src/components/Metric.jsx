@@ -7,8 +7,10 @@ const Metric = () => (
     <Head className={styles.Head} text="isaac r; me." />
     <img
       className={styles.Metric}
-      alt="github metrics graph"
+      alt="My github metrics graph, showing contributions over the last year."
       src="https://raw.githubusercontent.com/isaec/isaec/main/github-metrics.svg"
+      width={480}
+      height={834}
     />
   </Card>
 );
