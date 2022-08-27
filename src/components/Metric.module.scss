@@ -3,6 +3,8 @@
 .Metric {
   object-fit: contain;
   min-width: 0px;
+  height: auto;
+  margin-bottom: -30px;
   will-change: transform; // this little nasty thing will prevent lag on mobile, somehow
 }
 
