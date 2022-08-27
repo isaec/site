@@ -12,9 +12,11 @@ export const Table = (props) => {
         {(row, index) => (
           <>
             <p className={styles.key}>
-              <a href={row[2]} target="_blank" rel="noopener noreferrer">
-                {row[0]}
-              </a>
+              <Show when={row[2] !== undefined} fallback={row[0]}>
+                <a href={row[2]} target="_blank" rel="noopener noreferrer">
+                  {row[0]}
+                </a>
+              </Show>
               :
             </p>
             <p className={styles.value}>
