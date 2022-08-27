@@ -7,6 +7,8 @@ const ImageCard = (props) => (
     <img
       src={props.src}
       alt={props.alt}
+      width={props.width}
+      height={props.height ?? props.width}
       classList={{
         [styles.image]: true,
         [styles.round]: props.round,

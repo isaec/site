@@ -9,32 +9,37 @@
 
 img.image {
   &.round {
-    transition: border-radius 2s $easing-standard .1s;
-    &:hover{
+    transition: border-radius 2s $easing-standard 0.1s;
+    &:hover {
       border-radius: $radius-lg;
     }
     border-radius: 50%;
   }
   padding: $size-2;
   margin: auto;
-  
+  height: auto;
+
   $convert: math.div(math.$pi, 180);
   @function shadow($angle, $color) {
-    @return math.cos($angle * $convert) * 5+px math.sin($angle * $convert) * 5+px 10px 7px $color;
+    @return math.cos($angle * $convert) * 5 + px math.sin($angle * $convert) * 5 +
+      px 10px 7px $color;
   }
 
   @keyframes highlight {
     @for $degrees from 0 through 360 {
       @if $degrees % 9 == 0 {
         #{math.div($degrees, 3.6)}% {
-            $shadow-list: ();
-        
-            @for $i from 1 through length($rainbow) {
-              $shadow-list: list.append($shadow-list, shadow($degrees + (($i - 1) * 45), list.nth($rainbow, $i)));
-            }
-        
-            box-shadow: list.zip($shadow-list);
+          $shadow-list: ();
+
+          @for $i from 1 through length($rainbow) {
+            $shadow-list: list.append(
+              $shadow-list,
+              shadow($degrees + (($i - 1) * 45), list.nth($rainbow, $i))
+            );
           }
+
+          box-shadow: list.zip($shadow-list);
+        }
       }
     }
   }

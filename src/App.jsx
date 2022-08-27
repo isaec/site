@@ -18,7 +18,8 @@ const App = () => {
       <ImageCard
         round
         src="https://github.com/isaec.png"
-        alt="github profile picture"
+        alt="github profile picture, a cute little creature with a flower on its head"
+        width={338}
       />
       <Copy.TechStack />
       <Group.Horizontal>
