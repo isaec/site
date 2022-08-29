@@ -5,6 +5,7 @@ import QRCode from "./components/QRCode";
 import * as Copy from "./components/Copy";
 import * as Group from "./components/Group";
 import DisableAnimation from "./components/DisableAnimation";
+import pfpRoute from "./img/pfp.png";
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
       </Group.Vertical>
       <ImageCard
         round
-        src="https://github.com/isaec.png"
+        src={pfpRoute}
         alt="github profile picture, a cute little creature with a flower on its head"
         width={338}
       />
