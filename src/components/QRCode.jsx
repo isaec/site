@@ -2,7 +2,7 @@ import styles from "./QRCode.module.scss";
 import Card from "./Card";
 import qr from "qrcode";
 import Head from "./Head";
-import { createResource, createSignal } from "solid-js";
+import { createResource } from "solid-js";
 
 const makeQRCodeCanvas = async (url) => {
   const canvas = document.createElement("canvas");
@@ -21,7 +21,7 @@ const makeQRCodeCanvas = async (url) => {
 
 const QRCode = (props) => {
   const url = props.url;
-  const [canvas] = createResource(url, makeQRCodeCanvas);
+  const [canvas] = createResource(`https://${url}`, makeQRCodeCanvas);
   return (
     <Card>
       <Head text={url} />
