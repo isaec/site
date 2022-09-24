@@ -24,7 +24,7 @@ export const Table = (props) => {
             </p>
             <p className={styles.value}>
               {`"${row[1]}"`}
-              {index() + 1 !== props.children.length ? <span>{","}</span> : ""}
+              <span>,</span>
             </p>
           </Show>
         )}
@@ -47,7 +47,7 @@ export const List = (props) => {
           <>
             <p className={styles.value}>
               {`"${elem}"`}
-              {index() + 1 !== props.children.length ? <span>{","}</span> : ""}
+              <span>,</span>
             </p>
           </>
         )}
