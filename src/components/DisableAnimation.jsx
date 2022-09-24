@@ -27,12 +27,12 @@ const DisableAnimation = (props) => {
               <br />
               <br />
               Instead, you'll need to <i>imagine</i> slowly shifting rainbow
-              fades and halos for the images and paragraph headers - they are
+              fades and halos for the images and paragraph headers — they are
               highly tasteful, I promise.
               <br />
               <br />
               This could be because of low power mode, or it could be from a
-              user preference - either way, I get it. Have a nice day!
+              user preference — either way, I get it. Have a nice day!
             </p>
           </>
         }
