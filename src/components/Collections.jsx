@@ -10,7 +10,10 @@ export const Table = (props) => {
       </p>
       <For each={props.children}>
         {(row, index) => (
-          <>
+          <Show
+            when={Array.isArray(row)}
+            fallback={<p className={styles.comment}>{`// ${row.comment}`}</p>}
+          >
             <p className={styles.key}>
               <Show when={row[2] !== undefined} fallback={row[0]}>
                 <a href={row[2]} target="_blank" rel="noopener noreferrer">
@@ -23,7 +26,7 @@ export const Table = (props) => {
               {`"${row[1]}"`}
               {index() + 1 !== props.children.length ? <span>{","}</span> : ""}
             </p>
-          </>
+          </Show>
         )}
       </For>
       <p className={styles.bracket}>{"};"}</p>

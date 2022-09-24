@@ -49,6 +49,7 @@ export const Contact = () => (
         ["discord", "isaac#9000"],
         ["github", "isaec", "https://github.com/isaec"],
         ["email", "isaac@rubenfamily.com", "mailto:isaac@rubenfamily.com"],
+        { comment: "^ slowest way to reach me" },
       ]}
     </Table>
   </Card>

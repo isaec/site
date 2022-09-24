@@ -18,9 +18,18 @@
     grid-column: -1 / 1;
   }
 
+  & > .comment,
   & > .key {
     padding-right: 1em;
     padding-left: 2em;
+  }
+
+  & > .comment {
+    color: $color-teal-700;
+    grid-column: -1 / 1;
+  }
+
+  & > .key {
     color: $color-blue-300;
 
     & > a {
