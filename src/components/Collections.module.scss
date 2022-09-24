@@ -20,8 +20,8 @@
 
   & > .comment,
   & > .key {
-    padding-right: 1em;
-    padding-left: 2em;
+    padding-right: 1ch;
+    padding-left: 2ch;
   }
 
   & > .comment {
@@ -67,7 +67,7 @@
   //   grid-column: -1 / 1;
   // }
   & > .value {
-    padding-left: 2em;
+    padding-left: 2ch;
     color: $color-orange-300;
 
     & > span {
