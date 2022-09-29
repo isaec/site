@@ -34,7 +34,9 @@
       property="og:description"
       content="A student and software developer living in California. I do freelance web work, and make things (like this site) for fun."
     />
-    <meta property="og:image" content="/src/img/pfp.png" />
+    <!-- vite does not treat meta content as url, so no asset handling -->
+    <!-- if this changed, content of og:image should be /src/img/pfp.png -->
+    <meta property="og:image" content="https://github.com/isaec.png" />
     <meta property="og:image:alt" content="github profile picture" />
     <meta property="og:type" content="profile" />
     <meta property="profile:first_name" content="isaac" />
