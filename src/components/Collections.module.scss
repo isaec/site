@@ -1,4 +1,5 @@
 @use "../config" as *;
+@use "../App.module.scss";
 
 .Table,
 .Grid {
@@ -52,6 +53,13 @@
 
     & > span {
       color: $color-grey-300;
+    }
+
+    &.long {
+      @media screen and (max-width: 420px) {
+        grid-column: -1/1;
+        padding-left: 4ch;
+      }
     }
   }
 }
