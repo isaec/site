@@ -1,6 +1,9 @@
 @use "../config" as *;
 @use "../App.module.scss";
 
+$longPairOverflowSize: 420px;
+$commentWrapSize: 385px;
+
 .Table,
 .Grid {
   display: grid;
@@ -36,6 +39,17 @@
   & > .comment {
     color: $color-teal-700;
     grid-column: -1 / 1;
+    @media screen and (max-width: $commentWrapSize) {
+      & > .commentSlash {
+        display: none;
+      }
+      & > .commentBlockSlash {
+        display: inline !important;
+      }
+    }
+    & > .commentBlockSlash {
+      display: none;
+    }
   }
 
   & > .key {
@@ -57,7 +71,7 @@
     }
 
     &.long {
-      @media screen and (max-width: 420px) {
+      @media screen and (max-width: $longPairOverflowSize) {
         grid-column: -1/1;
         padding-left: 4ch;
       }
