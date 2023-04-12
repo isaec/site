@@ -22,7 +22,12 @@ export const Table = (props) => {
               </Show>
               :
             </p>
-            <p className={styles.value}>
+            <p
+              classList={{
+                [styles.value]: true,
+                [styles.long]: row[1].length > 12,
+              }}
+            >
               {`"${row[1]}"`}
               <span>,</span>
             </p>

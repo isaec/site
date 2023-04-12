@@ -1,7 +1,16 @@
 @use "../config" as *;
+@use "../App.module.scss";
+
+.Table,
+.Grid {
+  display: grid;
+  overflow: hidden;
+  & > * {
+    min-width: 0px;
+  }
+}
 
 .Table {
-  display: grid;
   grid-template-columns: min-content 1fr;
 
   & > .assignment {
@@ -46,11 +55,17 @@
     & > span {
       color: $color-grey-300;
     }
+
+    &.long {
+      @media screen and (max-width: 420px) {
+        grid-column: -1/1;
+        padding-left: 4ch;
+      }
+    }
   }
 }
 
 .List {
-  display: grid;
   grid-template-columns: 1fr;
 
   & > .assignment {

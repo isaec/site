@@ -15,8 +15,8 @@ export const Who = () => (
   <Card className={styles.paragraph_gap}>
     <Head text="who?" />
     <p>
-      A student and software developer living in California. I do freelance web
-      work, and make things (like this site) for fun.
+      A student and software developer living in California. I do robotics,
+      freelance web work, and make things (like this site) for fun.
     </p>
   </Card>
 );
@@ -26,13 +26,17 @@ export const SayMore = () => (
     <Head text="say more..." />
     <p>
       Backpacker, dev, rpg and video game enthusiast. <Code>he/him/his</Code>.
-      Cryptocurrency skeptic! Sometimes weird. Dysgraphic.
+      Cryptocurrency skeptic! Dysgraphic.
     </p>
     <p>I enjoy making things, especially if I learn something from it.</p>
     <p>
       If this site stutters, especially on mobile while scrolling, there sadly
       isn't much to be done. Browsers do a bad job of large <Code>.svg</Code>{" "}
       files, like the one used for stats.
+    </p>
+    <p>
+      The masonry and animated rainbows are all CSS, try changing the width of
+      your window.
     </p>
   </Card>
 );
