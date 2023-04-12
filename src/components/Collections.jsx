@@ -12,7 +12,14 @@ export const Table = (props) => {
         {(row, index) => (
           <Show
             when={Array.isArray(row)}
-            fallback={<p className={styles.comment}>{`// ${row.comment}`}</p>}
+            fallback={
+              <p className={styles.comment}>
+                <span className={styles.commentSlash}>{"// "}</span>
+                <span className={styles.commentBlockSlash}>{"/* "}</span>
+                {`${row.comment}`}
+                <span className={styles.commentBlockSlash}>{" */"}</span>
+              </p>
+            }
           >
             <p className={styles.key}>
               <Show when={row[2] !== undefined} fallback={row[0]}>
