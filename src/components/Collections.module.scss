@@ -1,7 +1,14 @@
 @use "../config" as *;
 
-.Table {
+.Table,
+.Grid {
   display: grid;
+  & > * {
+    min-width: 0px;
+  }
+}
+
+.Table {
   grid-template-columns: min-content 1fr;
 
   & > .assignment {
@@ -50,7 +57,6 @@
 }
 
 .List {
-  display: grid;
   grid-template-columns: 1fr;
 
   & > .assignment {
