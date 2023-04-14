@@ -56,7 +56,9 @@ jobs:
       - name: Populate Cloudflare Cache
         # iterate over all files in dist folder and curl them
         run: |
-          for file in dist/*; do
+          for file in dist/**/*; do
+            # trim dist/ from the beginning of the file path
+            file=${file#dist/}
             echo "curling $file"
             curl -I "https://isaacr.me/$file"
           done
