@@ -24,6 +24,12 @@ jobs:
           branch: gh-pages # The branch the action should deploy to.
           folder: dist # The folder the action should deploy.
 
+      - name: Upload Build Artifacts 📦
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist_directory
+          path: dist
+
   clear-cache:
     needs: build-and-deploy
     runs-on: ubuntu-latest
@@ -33,4 +39,25 @@ jobs:
         with:
           cf_zone: ${{ secrets.CLOUDFLARE_ZONE }}
           cf_auth: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
+
+  populate-cache:
+    needs: clear-cache
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Build Artifacts 📦
+        uses: actions/download-artifact@v3
+        with:
+          name: dist_directory
+          path: dist
+
+      - name: Sleep for 25 seconds
+        run: sleep 25
+
+      - name: Populate Cloudflare Cache
+        # iterate over all files in dist folder and curl them
+        run: |
+          for file in dist/*; do
+            echo "curling $file"
+            curl -I "https://isaacr.me/$file"
+          done
 
