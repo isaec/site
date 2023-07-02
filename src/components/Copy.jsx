@@ -50,7 +50,7 @@ export const Contact = () => (
     </p>
     <Table label="contacts">
       {[
-        ["discord", "isaac#9000"],
+        ["discord", "eyezap"],
         ["github", "isaec", "https://github.com/isaec"],
         ["email", "isaac@rubenfamily.com", "mailto:isaac@rubenfamily.com"],
         { comment: "^ slowest way to reach me" },
