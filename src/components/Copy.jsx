@@ -15,8 +15,8 @@ export const Who = () => (
   <Card className={styles.paragraph_gap}>
     <Head text="who?" />
     <p>
-      A student and software developer living in California. I do robotics,
-      freelance web work, and make things (like this site) for fun.
+      A student and software developer studying CS and Math at UW Madison. I do
+      robotics, freelance web work, and make things (like this site) for fun.
     </p>
   </Card>
 );
@@ -63,9 +63,9 @@ export const TechStack = () => (
   <Card className={styles.paragraph_gap}>
     <Head text="tech stack?" />
     <p>
-      This site is being rendered by your web client, and hosted on github
-      pages. These lists are generated from <Code>package.json</Code> at build
-      time.
+      This site is being rendered by your web client, and hosted on github pages
+      via cloudflare. These lists are generated from <Code>package.json</Code>{" "}
+      at build time.
     </p>
     <List label="dependencies">{Object.keys(dependencies)}</List>
     <List label="devDependencies">{Object.keys(devDependencies)}</List>
