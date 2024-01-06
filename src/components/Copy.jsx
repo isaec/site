@@ -25,7 +25,7 @@ export const SayMore = () => (
   <Card className={styles.paragraph_gap}>
     <Head text="say more..." />
     <p>
-      Backpacker, dev, rpg and video game enthusiast. <Code>he/him/his</Code>.
+      Backpacker, dev, rpg and video game enthusiast. <Code>she/her</Code>.
       Cryptocurrency skeptic! Dysgraphic.
     </p>
     <p>I enjoy making things, especially if I learn something from it.</p>

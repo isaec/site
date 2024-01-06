@@ -16,7 +16,8 @@ $scale-000: 0.75rem;
 $scale-00: 0.875rem;
 
 // font-family
-$font-sans: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue;
+$font-sans: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu,
+  Cantarell, Helvetica Neue;
 $font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
 $font-mono: Consolas, Menlo, Monaco, "Liberation Mono", monospace;
 
@@ -121,10 +122,13 @@ $layer-top: 2147483647;
 
 // box-shadow
 $elevation-1: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-$elevation-2: 0 1px 3px 0 rgba(0, 0, 0, 0.1),0 1px 2px 0 rgba(0, 0, 0, 0.06);
-$elevation-3: 0 4px 6px -2px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
-$elevation-4: 0 12px 16px -4px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-$elevation-5: 0 20px 24px -4px rgba(0, 0, 0, 0.1), 0 8px 8px -4px rgba(0, 0, 0, 0.04);
+$elevation-2: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$elevation-3: 0 4px 6px -2px rgba(0, 0, 0, 0.1),
+  0 2px 4px -2px rgba(0, 0, 0, 0.06);
+$elevation-4: 0 12px 16px -4px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$elevation-5: 0 20px 24px -4px rgba(0, 0, 0, 0.1),
+  0 8px 8px -4px rgba(0, 0, 0, 0.04);
 $elevation-6: 0 24px 48px -12px rgba(0, 0, 0, 0.25);
 $elevation-7: 0 32px 64px -12px rgba(0, 0, 0, 0.2);
 
@@ -143,9 +147,9 @@ $color-grey-500: #767c89;
 $color-grey-600: #555d6e;
 $color-grey-700: #3f4754;
 $color-grey-800: #2c343f;
-$color-grey-900: #10181C;
+$color-grey-900: #10181c;
 $color-grey-1000: #121212;
-$color-black: #14141B;
+$color-black: #14141b;
 $color-grey: $color-grey-500;
 $color-red-300: #fc8181;
 $color-red-500: #e53e3e;
@@ -183,7 +187,9 @@ $color-brown-300: #a1887f;
 $color-brown-500: #795548;
 $color-brown-700: #5d4037;
 $color-brown: $color-brown-500;
-$rainbow: $color-pink, $color-red, $color-orange, $color-yellow, $color-green, $color-teal, $color-blue, $color-purple;
+$rainbow: $color-pink, $color-red, $color-orange, $color-yellow, $color-green,
+  $color-teal, $color-blue, $color-purple;
+$trans_flag: $color-pink, $color-blue, $color-grey-50, $color-grey-50;
 
 // grid-template-columns and grid-template-rows
 $grid-2: repeat(2, minmax(0, 1fr));
@@ -202,4 +208,5 @@ $grid-12: repeat(12, minmax(0, 1fr));
 $grid-page-width: $width-xl;
 $grid-page-gutter: 5vw;
 $grid-page-main: unquote("2 / 3");
-$grid-page: minmax($grid-page-gutter, 1fr) minmax(0, $grid-page-width) minmax($grid-page-gutter, 1fr)
+$grid-page: minmax($grid-page-gutter, 1fr) minmax(0, $grid-page-width)
+  minmax($grid-page-gutter, 1fr);
